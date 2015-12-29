@@ -1,6 +1,7 @@
 package Morpheuss93.MorpheussTechReloaded.machines.alloyFurnace.basic;
 
 import Morpheuss93.MorpheussTechReloaded.machines.alloyFurnace.TileEntityAlloyFurnace;
+import Morpheuss93.MorpheussTechReloaded.machines.alloyFurnace.alcoholPowered.TileEntityAlcoholAlloyFurnace;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.entity.player.EntityPlayer;
@@ -29,7 +30,7 @@ public class ContainerAlloyFurnace extends Container { //TODO fare lo stesso del
         //this.addSlotToContainer(new Slot(tileEntityFurnace,0,56,17));//position of slot
 		/*if(!(tileEntityFurnace instanceof TileEntityAlcoholAlloyFurnace))
 		{*/
-        if(/*!(tileEntityFurnace instanceof TileEntityAlcoholAlloyFurnace)*/true)//TODO
+        if(!(tileEntityFurnace instanceof TileEntityAlcoholAlloyFurnace))//TODO
             this.addSlotToContainer(new Slot(tileEntityFurnace,9,xFuel,yFuel));//combustibile prima 1
         else
             this.addSlotToContainer(new Slot(tileEntityFurnace,9,147,63));

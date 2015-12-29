@@ -3,6 +3,7 @@ package Morpheuss93.MorpheussTechReloaded.machines.alloyFurnace.basic;
 import Morpheuss93.MorpheussTechReloaded.MorpheussTechReloaded;
 import Morpheuss93.MorpheussTechReloaded.Reference;
 import Morpheuss93.MorpheussTechReloaded.machines.MachinesHandler;
+import Morpheuss93.MorpheussTechReloaded.machines.alloyFurnace.TileEntityAlloyFurnace;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.Block;
@@ -238,7 +239,7 @@ public class AlloyFurnace extends BlockContainer {
 
     public void breakBlock(World world,int x,int y,int z,Block block,int meta){
         if(!isBurning){
-            TileEntityAlloyFurnaceBasic tileEntityAlloyFurnace =(TileEntityAlloyFurnaceBasic)world.getTileEntity(x, y, z);
+            TileEntityAlloyFurnace tileEntityAlloyFurnace =(TileEntityAlloyFurnace)world.getTileEntity(x, y, z);
             if(tileEntityAlloyFurnace!=null){
                 for(int i=0;i<tileEntityAlloyFurnace.getSizeInventory();++i)
                 {
@@ -336,6 +337,6 @@ public class AlloyFurnace extends BlockContainer {
 
     @Override
     public TileEntity createNewTileEntity(World world, int par2) {
-        return new TileEntityAlloyFurnaceBasic();
+        return new TileEntityAlloyFurnace();
     }
 }
