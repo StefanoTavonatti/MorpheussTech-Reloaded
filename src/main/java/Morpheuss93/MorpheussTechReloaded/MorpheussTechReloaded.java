@@ -1,6 +1,7 @@
 package Morpheuss93.MorpheussTechReloaded;
 
 import Morpheuss93.MorpheussTechReloaded.fluids.FluidsHandler;
+import Morpheuss93.MorpheussTechReloaded.machines.MachinesHandler;
 import Morpheuss93.MorpheussTechReloaded.ores.OresHandler;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.SidedProxy;
@@ -50,6 +51,9 @@ public class MorpheussTechReloaded {
         FluidsHandler.configureFluids();
         FluidsHandler.configureItems();
 
+        MachinesHandler.configureMachine();
+        MachinesHandler.configureTileEntity();
+
         config.save();
 
     }
@@ -59,7 +63,7 @@ public class MorpheussTechReloaded {
     {
 
         proxy.registerRenders();
-        //NetworkRegistry.INSTANCE.registerGuiHandler(instance, new MGuiHandler());//TODO
+        NetworkRegistry.INSTANCE.registerGuiHandler(instance, new MGuiHandler());//TODO
     }
 
     @Mod.EventHandler
