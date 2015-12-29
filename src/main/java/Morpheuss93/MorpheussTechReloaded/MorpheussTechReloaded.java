@@ -43,6 +43,13 @@ public class MorpheussTechReloaded {
         }
     };
 
+    public static CreativeTabs tabComponent=new CreativeTabs("MorpheussTech-Reloaded Machines Components") {
+        @Override
+        public Item getTabIconItem() {
+            return Items.diamond;
+        }
+    };
+
 
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event)
@@ -60,6 +67,7 @@ public class MorpheussTechReloaded {
 
         MachinesHandler.configureMachine();
         MachinesHandler.configureTileEntity();
+        MachinesHandler.configureComponents();
         MachinesHandler.configureCrafting();
 
         config.save();
