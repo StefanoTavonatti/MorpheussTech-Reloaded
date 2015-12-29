@@ -43,7 +43,6 @@ public class AlloyFurnace extends BlockContainer {
     public AlloyFurnace(boolean isActive) {
         super(Material.rock);
 
-        this.setCreativeTab(MorpheussTechReloaded.tabOre);
         isBurning2=isActive;
 
         if(isActive){
@@ -191,31 +190,6 @@ public class AlloyFurnace extends BlockContainer {
         }
     }
 
-	/*public void onBlockPlaceBy(World world,int x,int y,int z,EntityLivingBase entity,ItemStack itemstack){
-		int direction = MathHelper.floor_double((double) (entity.rotationYaw * 4.0F / 360.0F) + 0.5D) & 3;
-
-		if (direction == 0) {
-			world.setBlockMetadataWithNotify(x, y, z, 2, 2);
-		}
-
-		if (direction == 1) {
-			world.setBlockMetadataWithNotify(x, y, z, 5, 2);
-		}
-
-		if (direction == 2) {
-			world.setBlockMetadataWithNotify(x, y, z, 3, 2);
-		}
-
-		if (direction == 3) {
-			world.setBlockMetadataWithNotify(x, y, z, 4, 2);
-		}
-
-		if (itemstack.hasDisplayName()) {
-			((TileEntityAlloyFurnace) world.getTileEntity(x, y, z)).furnaceName(itemstack.getDisplayName());
-		}
-
-
-	}*/
 
     public static void updateBlockState(boolean burning,World world,int x,int y,int z){
         int direction =world.getBlockMetadata(x, y, z);
@@ -276,29 +250,6 @@ public class AlloyFurnace extends BlockContainer {
         }
         super.breakBlock(world, x, y, z, block, meta);
     }
-
-	/*@SideOnly(Side.CLIENT)
-	public void randomDisplayTick(World world,int x,int y,int z,Random random){
-		if(this.isBurning2){
-			int direction=world.getBlockMetadata(x, y, z);
-
-			float xx=(float) x+ 0.5F,yy=(float) y+random.nextFloat()*6.0F/16.0F,zz=(float) z+0.5F,xx2=random.nextFloat() * 0.3F - 0.2F, zz2 = 0.5F;
-
-			if (direction == 4) {
-				world.spawnParticle("smoke", (double) (xx - zz2), (double) yy, (double) (zz + xx2), 0.0F, 0.0F, 0.0F);
-				world.spawnParticle("flame", (double) (xx - zz2), (double) yy, (double) (zz + xx2), 0.0F, 0.0F, 0.0F);
-			} else if (direction == 5) {
-				world.spawnParticle("smoke", (double) (xx - zz2), (double) yy, (double) (zz + xx2), 0.0F, 0.0F, 0.0F);
-				world.spawnParticle("flame", (double) (xx - zz2), (double) yy, (double) (zz + xx2), 0.0F, 0.0F, 0.0F);
-			} else if (direction == 3) {
-				world.spawnParticle("smoke", (double) (xx - zz2), (double) yy, (double) (zz + xx2), 0.0F, 0.0F, 0.0F);
-				world.spawnParticle("flame", (double) (xx - zz2), (double) yy, (double) (zz + xx2), 0.0F, 0.0F, 0.0F);
-			} else if (direction == 2) {
-				world.spawnParticle("smoke", (double) (xx - zz2), (double) yy, (double) (zz + xx2), 0.0F, 0.0F, 0.0F);
-				world.spawnParticle("flame", (double) (xx - zz2), (double) yy, (double) (zz + xx2), 0.0F, 0.0F, 0.0F);
-			}
-		}
-	}*/
 
     @SideOnly(Side.CLIENT)
     public void randomDisplayTick(World p_149734_1_, int p_149734_2_, int p_149734_3_, int p_149734_4_, Random p_149734_5_)

@@ -34,7 +34,7 @@ public class FluidsHandler {
     public static void configureItems(){
 
         alcoholBucket = new ItemBucket(alcoholBlock).setUnlocalizedName("AlcoholBucket").setContainerItem(Items.bucket).setTextureName(Reference.MODID+":"+"AlcoholBucket");
-        alcoholBucket.setCreativeTab(MorpheussTechReloaded.tabOre);//TODO right tab
+        alcoholBucket.setCreativeTab(MorpheussTechReloaded.tabMachine);//TODO right tab
         GameRegistry.registerItem(alcoholBucket, Reference.MODID+"_"+"AlcoholBucket");
         FluidContainerRegistry.registerFluidContainer(alcohol,new ItemStack(alcoholBucket),new ItemStack(Items.bucket));
         //gestisco l'evento del fluido che viene raccolto

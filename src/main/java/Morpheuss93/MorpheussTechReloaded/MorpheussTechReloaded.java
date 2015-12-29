@@ -36,6 +36,13 @@ public class MorpheussTechReloaded {
 
     };
 
+    public static CreativeTabs tabMachine=new CreativeTabs("MorpheussTech-Reloaded Machines") {//TODO right position for elements and change icon
+        @Override
+        public Item getTabIconItem() {
+            return FluidsHandler.alcoholBucket;
+        }
+    };
+
 
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event)
