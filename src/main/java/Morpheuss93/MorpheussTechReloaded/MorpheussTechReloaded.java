@@ -1,5 +1,6 @@
 package Morpheuss93.MorpheussTechReloaded;
 
+import Morpheuss93.MorpheussTechReloaded.fluids.FluidsHandler;
 import Morpheuss93.MorpheussTechReloaded.ores.OresHandler;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.SidedProxy;
@@ -45,6 +46,9 @@ public class MorpheussTechReloaded {
         OresHandler.configureIngots();
         OresHandler.configureWorldGenerator();
         OresHandler.configureRecipes();
+
+        FluidsHandler.configureFluids();
+        FluidsHandler.configureItems();
 
         config.save();
 
