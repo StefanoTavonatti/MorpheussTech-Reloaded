@@ -43,6 +43,7 @@ public class MorpheussTechReloaded {
 
         OresHandler.configureOre();
         OresHandler.configureIngots();
+        OresHandler.configureWorldGenerator();
 
         config.save();
 

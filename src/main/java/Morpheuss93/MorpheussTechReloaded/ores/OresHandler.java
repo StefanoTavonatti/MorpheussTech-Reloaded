@@ -12,6 +12,10 @@ import Morpheuss93.MorpheussTechReloaded.ores.ingots.TinIngot;
 import Morpheuss93.MorpheussTechReloaded.ores.ingots.alloy.BrassIngot;
 import Morpheuss93.MorpheussTechReloaded.ores.ingots.alloy.BronzeIngot;
 import Morpheuss93.MorpheussTechReloaded.ores.ingots.alloy.SteelIngot;
+import Morpheuss93.MorpheussTechReloaded.ores.worldgenerators.AluminiumWGenerator;
+import Morpheuss93.MorpheussTechReloaded.ores.worldgenerators.CopperWGenerator;
+import Morpheuss93.MorpheussTechReloaded.ores.worldgenerators.SilverWGenerator;
+import Morpheuss93.MorpheussTechReloaded.ores.worldgenerators.TinWGenerator;
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraftforge.oredict.OreDictionary;
 
@@ -46,6 +50,13 @@ public class OresHandler {//TODO zinc
 
         GameRegistry.registerBlock(silverOre, Reference.MODID+"-"+silverOre.getUnlocalizedName().substring(5));
         OreDictionary.registerOre("oreSilver", silverOre);
+    }
+
+    public static void configureWorldGenerator(){
+        GameRegistry.registerWorldGenerator(new CopperWGenerator(),0);
+        GameRegistry.registerWorldGenerator(new AluminiumWGenerator(), 0);
+        GameRegistry.registerWorldGenerator(new SilverWGenerator(), 0);
+        GameRegistry.registerWorldGenerator(new TinWGenerator(), 0);
     }
 
     public static void configureIngots(){
