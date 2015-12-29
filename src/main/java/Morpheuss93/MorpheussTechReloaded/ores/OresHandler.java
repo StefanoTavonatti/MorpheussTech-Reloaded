@@ -17,6 +17,7 @@ import Morpheuss93.MorpheussTechReloaded.ores.worldgenerators.CopperWGenerator;
 import Morpheuss93.MorpheussTechReloaded.ores.worldgenerators.SilverWGenerator;
 import Morpheuss93.MorpheussTechReloaded.ores.worldgenerators.TinWGenerator;
 import cpw.mods.fml.common.registry.GameRegistry;
+import net.minecraft.item.ItemStack;
 import net.minecraftforge.oredict.OreDictionary;
 
 /**
@@ -87,5 +88,14 @@ public class OresHandler {//TODO zinc
         steelIngot=new SteelIngot();
         GameRegistry.registerItem(steelIngot, Reference.MODID+"-"+steelIngot.getUnlocalizedName().substring(5));
         OreDictionary.registerOre("ingotSteel", steelIngot);
+    }
+
+    public static void configureRecipes(){
+        ////////smelting/////////
+        GameRegistry.addSmelting(copperOre, new ItemStack(copperIngot), 0.8F);
+        GameRegistry.addSmelting(aluminiumOre, new ItemStack(aluminiumIngot), 0.8F);
+        GameRegistry.addSmelting(silverOre, new ItemStack(silverIngot), 0.8F);
+        GameRegistry.addSmelting(tinOre, new ItemStack(tinIngot), 0.8F);
+
     }
 }
