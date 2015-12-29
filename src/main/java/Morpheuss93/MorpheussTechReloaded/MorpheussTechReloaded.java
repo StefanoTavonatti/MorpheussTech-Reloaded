@@ -60,6 +60,7 @@ public class MorpheussTechReloaded {
 
         MachinesHandler.configureMachine();
         MachinesHandler.configureTileEntity();
+        MachinesHandler.configureCrafting();
 
         config.save();
 

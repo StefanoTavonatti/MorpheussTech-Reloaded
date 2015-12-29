@@ -8,6 +8,8 @@ import Morpheuss93.MorpheussTechReloaded.machines.alloyFurnace.basic.AlloyFurnac
 import Morpheuss93.MorpheussTechReloaded.machines.alloyFurnace.basic.TileEntityAlloyFurnaceBasic;
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
+import net.minecraft.init.Blocks;
+import net.minecraft.item.ItemStack;
 
 /**
  * Created by stefano on 29/12/15.
@@ -38,5 +40,9 @@ public class MachinesHandler {
     public static void configureTileEntity(){
         GameRegistry.registerTileEntity(TileEntityAlloyFurnaceBasic.class, Reference.MODID+"TileEntityAlloyFurnaceBasic");
         GameRegistry.registerTileEntity(TileEntityAlcoholAlloyFurnace.class, Reference.MODID+"TileEntityAlcoholAlloyFurnace");
+    }
+
+    public static void configureCrafting(){
+        GameRegistry.addShapedRecipe(new ItemStack(alloyFurnace,1), new Object[]{"BFB","B B","BFB",'B', Blocks.brick_block,'F',Blocks.furnace});
     }
 }
