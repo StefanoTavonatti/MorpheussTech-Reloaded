@@ -1,0 +1,22 @@
+itemGroup.MorpheussTech-Reloaded Ores=MorpheussTech-Reloaded Ores
+
+tile.Copper Ore.name=Copper Ore
+tile.Tin Ore.name=Tin Ore
+tile.Silver Ore.name=Silver Ore
+tile.Aluminium Ore.name=Aluminium Ore
+tile.AlloyFurnace.name=Alloy Furnace
+tile.Alcohol.name=Alcohol
+tile.AlcoholAlloyFurnace.name=Alcohol Powered Alloy Furnace
+
+item.Copper Ingot.name=Copper Ingot
+item.Aluminium Ingot.name=Aluminium Ingot
+item.Silver Ingot.name=Silver Ingot
+item.Tin Ingot.name=Tin Ingot
+item.Bronze Ingot.name=Bronze Ingot
+item.Brass Ingot.name=Brass Ingot
+item.Steel Ingot.name=Steel Ingot
+item.AlcoholBucket.name=Alcohol Bucket
+item.Small Alcohol Burner Support.name=Small Alcohol Burner Support
+item.Small Alcohol Burner Component.name=Small Alcohol Burner Component
+item.Small Igniter.name=Small Igniter
+item.Small Alcohol Burner.name=Small Alcohol Burner
