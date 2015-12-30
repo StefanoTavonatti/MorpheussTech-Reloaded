@@ -1,5 +1,8 @@
 package Morpheuss93.MorpheussTechReloaded;
 
+import Morpheuss93.MorpheussTechReloaded.machines.FishTrap.ContainerFishTrap;
+import Morpheuss93.MorpheussTechReloaded.machines.FishTrap.GUIFishTrap;
+import Morpheuss93.MorpheussTechReloaded.machines.FishTrap.TileEntityFishTrap;
 import Morpheuss93.MorpheussTechReloaded.machines.alloyFurnace.TileEntityAlloyFurnace;
 import Morpheuss93.MorpheussTechReloaded.machines.alloyFurnace.alcoholPowered.GUIAlcoholAlloyFurnace;
 import Morpheuss93.MorpheussTechReloaded.machines.alloyFurnace.alcoholPowered.TileEntityAlcoholAlloyFurnace;
@@ -26,6 +29,11 @@ public class MGuiHandler implements IGuiHandler {
             TileEntityAlcoholAlloyFurnace tileEntityAlcoholAlloyFurnace=(TileEntityAlcoholAlloyFurnace) world.getTileEntity(x, y, z);
             return new GUIAlcoholAlloyFurnace(player.inventory, tileEntityAlcoholAlloyFurnace);
         }
+
+        if(ID==2){
+            TileEntityFishTrap tileEntityFurnace =(TileEntityFishTrap) world.getTileEntity(x, y, z);
+            return new GUIFishTrap(player.inventory,tileEntityFurnace);
+        }
         return null;
     }
 
@@ -40,6 +48,11 @@ public class MGuiHandler implements IGuiHandler {
         if(ID==1){
             TileEntityAlcoholAlloyFurnace tileEntityAlcoholAlloyFurnace=(TileEntityAlcoholAlloyFurnace) world.getTileEntity(x,y, z);
             return new ContainerAlloyFurnace(player.inventory, tileEntityAlcoholAlloyFurnace);//TODO
+        }
+
+        if(ID==2){
+            TileEntityFishTrap tileEntityFurnace =(TileEntityFishTrap) world.getTileEntity(x, y, z);
+            return new ContainerFishTrap(player.inventory,tileEntityFurnace);
         }
         return null;
     }
