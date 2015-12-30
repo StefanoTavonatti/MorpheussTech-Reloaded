@@ -91,6 +91,7 @@ public class MorpheussTechReloaded {
         AgricultureHandler.configureFood();
         AgricultureHandler.configureCrops();
         AgricultureHandler.configureSeed();
+        AgricultureHandler.configureRecipes();
 
         config.save();
 

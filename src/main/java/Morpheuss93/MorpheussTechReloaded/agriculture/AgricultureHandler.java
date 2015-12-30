@@ -10,9 +10,15 @@ import Morpheuss93.MorpheussTechReloaded.agriculture.foods.*;
 import Morpheuss93.MorpheussTechReloaded.agriculture.seeds.AnanasSeed;
 import Morpheuss93.MorpheussTechReloaded.agriculture.seeds.Corn;
 import Morpheuss93.MorpheussTechReloaded.agriculture.seeds.CottonSeed;
+import Morpheuss93.MorpheussTechReloaded.craftingManagers.ShaplessRecipeDamages;
+import Morpheuss93.MorpheussTechReloaded.tools.ToolsHandler;
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by stefano on 30/12/15.
@@ -67,5 +73,19 @@ public class AgricultureHandler {
 
 
         //configureRecipe();//TODO recipes
+    }
+
+    public static void configureRecipes(){
+        List l=new ArrayList();
+        l.add(new ItemStack(corncob));
+        GameRegistry.addRecipe(new ShaplessRecipeDamages(new ItemStack(corn,1),l));
+
+
+        GameRegistry.addSmelting(corn, new ItemStack(popcorn), 0.8F);
+
+        List l2=new ArrayList();
+        l2.add(new ItemStack(ananas));
+        l2.add(new ItemStack(ToolsHandler.knife));
+        GameRegistry.addRecipe(new ShaplessRecipeDamages(new ItemStack(pineappleSlice,6),l2));
     }
 }

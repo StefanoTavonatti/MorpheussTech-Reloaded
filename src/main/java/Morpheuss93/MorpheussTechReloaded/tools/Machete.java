@@ -2,6 +2,7 @@ package Morpheuss93.MorpheussTechReloaded.tools;
 
 import Morpheuss93.MorpheussTechReloaded.MorpheussTechReloaded;
 import Morpheuss93.MorpheussTechReloaded.Reference;
+import Morpheuss93.MorpheussTechReloaded.agriculture.AgricultureHandler;
 import net.minecraft.block.Block;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.item.EntityItem;
@@ -32,7 +33,7 @@ public class Machete extends ItemSword{
     @Override
     public boolean onBlockDestroyed(ItemStack itemstack, World world, Block block, int x, int y, int z, EntityLivingBase entity){
 
-        /*if(block.getUnlocalizedName().equals("tile.tallgrass")&& !world.isRemote){//TODO seeds
+        if(block.getUnlocalizedName().equals("tile.tallgrass")&& !world.isRemote){
 
 
             int ran= MathHelper.getRandomIntegerInRange(new Random(), 0, 100);
@@ -44,13 +45,13 @@ public class Machete extends ItemSword{
 
             if(ran>=0 && ran <20)
             {
-                itemDrop=SeedHandler.ananasSeed;
+                itemDrop= AgricultureHandler.ananasSeed;
                 drop=true;
             }else if(ran>=20 && ran <30){
-                itemDrop=SeedHandler.cottonSeed;
+                itemDrop=AgricultureHandler.cottonSeed;
                 drop=true;
             }else if(ran>=30 && ran<40){
-                itemDrop=SeedHandler.corn;
+                itemDrop=AgricultureHandler.corn;
                 drop=true;
             }
 
@@ -63,7 +64,7 @@ public class Machete extends ItemSword{
                 itemstack.damageItem(1, entity);
 
             }
-        }*/
+        }
 
         return super.onBlockDestroyed(itemstack, world, block, x, y, z, entity);
     }
