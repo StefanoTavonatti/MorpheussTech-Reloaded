@@ -3,6 +3,7 @@ package Morpheuss93.MorpheussTechReloaded;
 import Morpheuss93.MorpheussTechReloaded.fluids.FluidsHandler;
 import Morpheuss93.MorpheussTechReloaded.machines.MachinesHandler;
 import Morpheuss93.MorpheussTechReloaded.ores.OresHandler;
+import Morpheuss93.MorpheussTechReloaded.tools.ToolsHandler;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
@@ -46,7 +47,14 @@ public class MorpheussTechReloaded {
     public static CreativeTabs tabComponent=new CreativeTabs("MorpheussTech-Reloaded Machines Components") {
         @Override
         public Item getTabIconItem() {
-            return Items.diamond;
+            return MachinesHandler.smallAlcoholBurner;
+        }
+    };
+
+    public static CreativeTabs tabTools=new CreativeTabs("MorpheussTech-Reloaded Tools") {
+        @Override
+        public Item getTabIconItem() {
+            return ToolsHandler.macheteBronze;
         }
     };
 
@@ -69,6 +77,8 @@ public class MorpheussTechReloaded {
         MachinesHandler.configureTileEntity();
         MachinesHandler.configureComponents();
         MachinesHandler.configureCrafting();
+
+        ToolsHandler.configureTools();
 
         config.save();
 

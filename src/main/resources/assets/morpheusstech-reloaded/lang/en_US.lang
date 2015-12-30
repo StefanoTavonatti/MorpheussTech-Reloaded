@@ -20,3 +20,32 @@ item.Small Alcohol Burner Support.name=Small Alcohol Burner Support
 item.Small Alcohol Burner Component.name=Small Alcohol Burner Component
 item.Small Igniter.name=Small Igniter
 item.Small Alcohol Burner.name=Small Alcohol Burner
+
+itemGroup.MorpheussTech-Crops=MorpheussTech-Crops
+
+tile.AnanasPlant.name = Pineapple Plant
+tile.CottonCrop.name=Cotton Crop
+tile.Cotton.name=Cotton
+tile.CornCrop.name=Corn Crop
+tile.Corn.name=Corn
+tile.Fish Trap.name=Fish Trap
+
+item.MacheteStone.name=Stone Machete
+item.MacheteIron.name=Iron Machete
+item.MacheteGold.name=Golden Machete
+item.MacheteDiamond.name=Diamond Machete
+item.MacheteBronze.name=Bronze Machete
+item.MacheteBrass.name=Brass Machete
+item.MacheteWood.name=Wooden Machete
+item.MacheteSteel.name=Steel Machete
+item.Ananas.name=Pineapple
+item.AnanasSeed.name=Pineapple Seed
+item.CottonSeed.name=Cotton Seed
+item.Knife.name=Knife
+item.RottenStuff.name=Rotten Stuff
+item.PineappleSlice.name=Pineapple Slice
+item.Corncob.name=Corncob
+item.Corn.name=Corn
+item.Popcorn.name=Popcorn
+item.FishingNet.name=Fishing Net
+item.CottonCloth.name=Cotton Cloth
