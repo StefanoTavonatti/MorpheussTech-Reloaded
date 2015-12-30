@@ -10,6 +10,7 @@ import net.minecraft.item.Item;
 public class ToolsHandler {
 
     public static Machete macheteStone,macheteIron,macheteGold,macheteDiamond,macheteBronze,macheteBrass,macheteWood,macheteSteel;
+    public static Knife knife;
 
     public static void configureTools(){
         macheteStone=new Machete(Item.ToolMaterial.STONE,"MacheteStone");
@@ -35,5 +36,9 @@ public class ToolsHandler {
 
         macheteSteel=new Machete(Materials.MaterialSteel, "MacheteSteel");
         GameRegistry.registerItem(macheteSteel, Reference.MODID+"-"+macheteSteel.getUnlocalizedName().substring(5));
+
+        knife=new Knife();
+        GameRegistry.registerItem(knife, Reference.MODID+"-"+knife.getUnlocalizedName().substring(5));
+        knife.setContainerItem(knife);
     }
 }
