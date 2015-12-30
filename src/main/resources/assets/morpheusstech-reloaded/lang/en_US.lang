@@ -1,4 +1,8 @@
 itemGroup.MorpheussTech-Reloaded Ores=MorpheussTech-Reloaded Ores
+itemGroup.MorpheussTech-Reloaded Machines=MorpheussTech-Reloaded Machines
+itemGroup.MorpheussTech-Reloaded Machines Components=MorpheussTech-Reloaded Machines Components
+itemGroup.MorpheussTech-Reloaded Tools=MorpheussTech-Reloaded Tools
+itemGroup.MorpheussTech-Reloaded Crops=MorpheussTech-Reloaded Crops
 
 tile.Copper Ore.name=Copper Ore
 tile.Tin Ore.name=Tin Ore
