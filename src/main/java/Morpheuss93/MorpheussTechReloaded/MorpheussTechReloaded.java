@@ -1,5 +1,6 @@
 package Morpheuss93.MorpheussTechReloaded;
 
+import Morpheuss93.MorpheussTechReloaded.agriculture.AgricultureHandler;
 import Morpheuss93.MorpheussTechReloaded.fluids.FluidsHandler;
 import Morpheuss93.MorpheussTechReloaded.machines.MachinesHandler;
 import Morpheuss93.MorpheussTechReloaded.ores.OresHandler;
@@ -58,6 +59,13 @@ public class MorpheussTechReloaded {
         }
     };
 
+    public static CreativeTabs tabCrops=new CreativeTabs("MorpheussTech-Reloaded Crops") {
+        @Override
+        public Item getTabIconItem() {
+            return AgricultureHandler.ananas;
+        }
+    };
+
 
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event)
@@ -79,6 +87,10 @@ public class MorpheussTechReloaded {
         MachinesHandler.configureCrafting();
 
         ToolsHandler.configureTools();
+
+        AgricultureHandler.configureFood();
+        AgricultureHandler.configureCrops();
+        AgricultureHandler.configureSeed();
 
         config.save();
 
