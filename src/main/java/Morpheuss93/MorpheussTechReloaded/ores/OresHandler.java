@@ -11,6 +11,7 @@ import Morpheuss93.MorpheussTechReloaded.ores.ingots.SilverIngot;
 import Morpheuss93.MorpheussTechReloaded.ores.ingots.TinIngot;
 import Morpheuss93.MorpheussTechReloaded.ores.ingots.alloy.BrassIngot;
 import Morpheuss93.MorpheussTechReloaded.ores.ingots.alloy.BronzeIngot;
+import Morpheuss93.MorpheussTechReloaded.ores.ingots.alloy.EnderAlloyIngot;
 import Morpheuss93.MorpheussTechReloaded.ores.ingots.alloy.SteelIngot;
 import Morpheuss93.MorpheussTechReloaded.ores.worldgenerators.AluminiumWGenerator;
 import Morpheuss93.MorpheussTechReloaded.ores.worldgenerators.CopperWGenerator;
@@ -37,6 +38,7 @@ public class OresHandler {//TODO zinc
     public static BronzeIngot bronzeIngot;
     public static BrassIngot brassIngot;
     public static SteelIngot steelIngot;
+    public static EnderAlloyIngot enderAlloyIngot;
 
     public static void configureOre(){
 
@@ -88,6 +90,10 @@ public class OresHandler {//TODO zinc
         steelIngot=new SteelIngot();
         GameRegistry.registerItem(steelIngot, Reference.MODID+"-"+steelIngot.getUnlocalizedName().substring(5));
         OreDictionary.registerOre("ingotSteel", steelIngot);
+
+        enderAlloyIngot=new EnderAlloyIngot();
+        GameRegistry.registerItem(enderAlloyIngot,Reference.MODID+"-"+enderAlloyIngot.getUnlocalizedName().substring(5));
+        OreDictionary.registerOre("ingotEnderAlloy",enderAlloyIngot);
     }
 
     public static void configureRecipes(){

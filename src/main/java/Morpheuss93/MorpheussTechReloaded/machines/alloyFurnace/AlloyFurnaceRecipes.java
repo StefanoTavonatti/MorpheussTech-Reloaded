@@ -53,6 +53,14 @@ public class AlloyFurnaceRecipes {
 
         addRecipie(temp, OresHandler.steelIngot, 1);
 
+        //Ender Alloy//
+
+        temp=new ArrayList();
+        temp.add(new ItemStack(OresHandler.steelIngot));
+        temp.add(new ItemStack(Items.ender_pearl));
+
+        addRecipie(temp,OresHandler.enderAlloyIngot, 1);
+
 
 
     }
