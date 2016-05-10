@@ -1,6 +1,7 @@
 package Morpheuss93.MorpheussTechReloaded;
 
 import Morpheuss93.MorpheussTechReloaded.agriculture.AgricultureHandler;
+import Morpheuss93.MorpheussTechReloaded.blocks.BlockHandler;
 import Morpheuss93.MorpheussTechReloaded.fluids.FluidsHandler;
 import Morpheuss93.MorpheussTechReloaded.machines.MachinesHandler;
 import Morpheuss93.MorpheussTechReloaded.ores.OresHandler;
@@ -77,6 +78,8 @@ public class MorpheussTechReloaded {
         OresHandler.configureIngots();
         OresHandler.configureWorldGenerator();
         OresHandler.configureRecipes();
+
+        BlockHandler.configureBlocks();
 
         FluidsHandler.configureFluids();
         FluidsHandler.configureItems();
