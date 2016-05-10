@@ -1,8 +1,10 @@
 package Morpheuss93.MorpheussTechReloaded.machines.alloyFurnace;
 
 import Morpheuss93.MorpheussTechReloaded.ores.OresHandler;
+import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.oredict.OreDictionary;
 
@@ -56,12 +58,19 @@ public class AlloyFurnaceRecipes {
         //Ender Alloy//
 
         temp=new ArrayList();
-        temp.add(new ItemStack(OresHandler.steelIngot));
+        temp.add(new ItemStack(OresHandler.silverIngot));
+        temp.add(new ItemStack(Items.ender_pearl));
         temp.add(new ItemStack(Items.ender_pearl));
 
         addRecipie(temp,OresHandler.enderAlloyIngot, 1);
 
 
+        temp=new ArrayList();
+        temp.add(new ItemStack(Blocks.stone));
+        temp.add(new ItemStack(Items.ender_pearl));
+        temp.add(new ItemStack(Items.ender_pearl));
+
+        addRecipie(temp,Item.getItemFromBlock(Blocks.end_stone),1);
 
     }
 
