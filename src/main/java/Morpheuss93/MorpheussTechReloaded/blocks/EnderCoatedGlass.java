@@ -5,6 +5,7 @@ import Morpheuss93.MorpheussTechReloaded.Reference;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.material.Material;
+import net.minecraft.world.World;
 
 import java.util.Random;
 
@@ -52,5 +53,23 @@ public class EnderCoatedGlass extends BaseGlassStyle {
     protected boolean canSilkHarvest()
     {
         return true;
+    }
+
+    @SideOnly(Side.CLIENT)
+    public void randomDisplayTick(World world, int x, int y, int z, Random random)
+    {
+
+
+        float f = (float)x + 0.5F;
+        float f1 = (float)y + 0.0F + random.nextFloat() * 6.0F / 16.0F;
+        float f2 = (float)z + 0.5F;
+        float f3 = 0.52F;
+        float f4 = random.nextFloat() * 0.6F - 0.3F;
+
+       // world.spawnParticle("smoke", (double)(f - f3), (double)f1, (double)(f2 + f4), 0.0D, 0.0D, 0.0D);
+       // world.spawnParticle("flame", (double)(f - f3), (double)f1, (double)(f2 + f4), 0.0D, 0.0D, 0.0D);
+        world.spawnParticle("portal", (double)(f + f4), (double)f1, (double)(f2 + f4), 0.0D, 0.0D, 0.0D);
+
+
     }
 }
