@@ -35,7 +35,7 @@ public class EnderCoatedGlass extends BaseGlassStyle {
     @SideOnly(Side.CLIENT)
     public int getRenderBlockPass()
     {
-        return 0;
+        return 1;
     }
 
     /**
