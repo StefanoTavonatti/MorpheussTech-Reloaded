@@ -1,8 +1,13 @@
 package Morpheuss93.MorpheussTechReloaded.tools;
 
 import Morpheuss93.MorpheussTechReloaded.Reference;
+import Morpheuss93.MorpheussTechReloaded.blocks.BlockHandler;
+import Morpheuss93.MorpheussTechReloaded.ores.OresHandler;
 import cpw.mods.fml.common.registry.GameRegistry;
+import net.minecraft.init.Items;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
+import net.minecraftforge.oredict.ShapedOreRecipe;
 
 /**
  * Created by stefano on 30/12/15.
@@ -44,5 +49,9 @@ public class ToolsHandler {
 
         magicMirror=new MagicMirror();
         GameRegistry.registerItem(magicMirror,Reference.MODID+"-"+magicMirror.getUnlocalizedName().substring(5));
+    }
+
+    public static void configureRecipes(){
+        GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(magicMirror),new Object[]{" d ","ava"," s ",'d', Items.diamond,'a',"ingotEnderAlloy",'v', BlockHandler.enderCoatedGlass,'s',"ingotSilver"}));
     }
 }

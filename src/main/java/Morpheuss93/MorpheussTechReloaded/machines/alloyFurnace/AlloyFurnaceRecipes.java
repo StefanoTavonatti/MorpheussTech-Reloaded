@@ -1,5 +1,6 @@
 package Morpheuss93.MorpheussTechReloaded.machines.alloyFurnace;
 
+import Morpheuss93.MorpheussTechReloaded.blocks.BlockHandler;
 import Morpheuss93.MorpheussTechReloaded.ores.OresHandler;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
@@ -72,6 +73,12 @@ public class AlloyFurnaceRecipes {
 
         addRecipie(temp,Item.getItemFromBlock(Blocks.end_stone),1);
 
+        temp=new ArrayList();
+        temp.add(new ItemStack(Blocks.glass));
+        temp.add(new ItemStack(Items.ender_pearl));
+        temp.add(new ItemStack(Items.ender_pearl));
+
+        addRecipie(temp,Item.getItemFromBlock(BlockHandler.enderCoatedGlass),1);
     }
 
     public void addRecipie(ArrayList recipie, Item result, int num){

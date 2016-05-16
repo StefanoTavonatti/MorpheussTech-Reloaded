@@ -90,6 +90,7 @@ public class MorpheussTechReloaded {
         MachinesHandler.configureCrafting();
 
         ToolsHandler.configureTools();
+        ToolsHandler.configureRecipes();
 
         AgricultureHandler.configureFood();
         AgricultureHandler.configureCrops();
