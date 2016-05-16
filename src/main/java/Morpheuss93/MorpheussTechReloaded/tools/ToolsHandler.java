@@ -11,6 +11,7 @@ public class ToolsHandler {
 
     public static Machete macheteStone,macheteIron,macheteGold,macheteDiamond,macheteBronze,macheteBrass,macheteWood,macheteSteel;
     public static Knife knife;
+    public static MagicMirror magicMirror;
 
     public static void configureTools(){
         macheteStone=new Machete(Item.ToolMaterial.STONE,"MacheteStone");
@@ -40,5 +41,8 @@ public class ToolsHandler {
         knife=new Knife();
         GameRegistry.registerItem(knife, Reference.MODID+"-"+knife.getUnlocalizedName().substring(5));
         knife.setContainerItem(knife);
+
+        magicMirror=new MagicMirror();
+        GameRegistry.registerItem(magicMirror,Reference.MODID+"-"+magicMirror.getUnlocalizedName().substring(5));
     }
 }
