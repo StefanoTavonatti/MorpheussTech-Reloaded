@@ -15,7 +15,7 @@ import java.util.Random;
 public class EnderCoatedGlass extends BaseGlassStyle {
     protected EnderCoatedGlass() {
         super(Material.glass);
-        this.setCreativeTab(MorpheussTechReloaded.tabOre);
+        this.setCreativeTab(MorpheussTechReloaded.tabBlocks);
         this.setBlockName("Ender Coated Glass");
         this.setBlockTextureName(Reference.MODID+":"+"EnderCoatedGlass");
         this.setHardness(4.0F);

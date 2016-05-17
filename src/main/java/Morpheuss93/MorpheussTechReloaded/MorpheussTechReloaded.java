@@ -53,6 +53,13 @@ public class MorpheussTechReloaded {
         }
     };
 
+    public static CreativeTabs tabBlocks=new CreativeTabs("MorpheussTech-Reloaded Blocks") {
+        @Override
+        public Item getTabIconItem() {
+            return Item.getItemFromBlock(BlockHandler.enderCoatedGlass);
+        }
+    };
+
     public static CreativeTabs tabTools=new CreativeTabs("MorpheussTech-Reloaded Tools") {
         @Override
         public Item getTabIconItem() {

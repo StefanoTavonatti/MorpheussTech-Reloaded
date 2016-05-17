@@ -22,7 +22,7 @@ public class MagicMirror extends Item {
         this.setUnlocalizedName("MagicMirror");
         this.setTextureName(Reference.MODID+":"+"MagicMirror");
         this.setMaxStackSize(1);
-        this.setCreativeTab(MorpheussTechReloaded.tabComponent);//TODO right tab
+        this.setCreativeTab(MorpheussTechReloaded.tabTools);//TODO right tab
     }
 
 
