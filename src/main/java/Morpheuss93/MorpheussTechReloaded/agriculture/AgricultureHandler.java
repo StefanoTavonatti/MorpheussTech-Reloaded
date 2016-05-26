@@ -10,6 +10,7 @@ import Morpheuss93.MorpheussTechReloaded.agriculture.foods.*;
 import Morpheuss93.MorpheussTechReloaded.agriculture.seeds.AnanasSeed;
 import Morpheuss93.MorpheussTechReloaded.agriculture.seeds.Corn;
 import Morpheuss93.MorpheussTechReloaded.agriculture.seeds.CottonSeed;
+import Morpheuss93.MorpheussTechReloaded.agriculture.seeds.EnderLilySeed;
 import Morpheuss93.MorpheussTechReloaded.craftingManagers.ShaplessRecipeDamages;
 import Morpheuss93.MorpheussTechReloaded.tools.ToolsHandler;
 import cpw.mods.fml.common.registry.GameRegistry;
@@ -34,12 +35,14 @@ public class AgricultureHandler {
     public static AnanasSeed ananasSeed;
     public static CottonSeed cottonSeed;
     public static Corn corn;
+    public static EnderLilySeed enderLilySeed;
 
     public final static Block ananasPlant=new AnanasPlant();
     public final static Block cottonCrop=new CottonCrop();
     public final static Block cottonUp=new CottonUp();
     public final static Block cornCrop=new CornCrop();
     public final static Block cornUp=new CornUp();
+    public final static Block enderLily=new EnderLily();
 
 
     public static void configureCrops(){
@@ -49,6 +52,7 @@ public class AgricultureHandler {
         GameRegistry.registerBlock(cottonUp, Reference.MODID+"-"+"CottonUp");
         GameRegistry.registerBlock(cornCrop, Reference.MODID+"-"+"CornCrop");
         GameRegistry.registerBlock(cornUp, Reference.MODID+"-"+"CornUp");
+        GameRegistry.registerBlock(enderLily,Reference.MODID+"-"+"EnderLily");
 
     }
 
@@ -70,6 +74,9 @@ public class AgricultureHandler {
 
         corn=new Corn();
         GameRegistry.registerItem(corn, Reference.MODID+"-"+corn.getUnlocalizedName().substring(5));
+
+        enderLilySeed=new EnderLilySeed();
+        GameRegistry.registerItem(enderLilySeed,Reference.MODID+"-"+enderLilySeed.getUnlocalizedName().substring(5));
 
 
         //configureRecipe();//TODO recipes
